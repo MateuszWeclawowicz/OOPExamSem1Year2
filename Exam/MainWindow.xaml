@@ -12,7 +12,7 @@
         <ListBox x:Name="lbxTeams" HorizontalAlignment="Left" Height="180" Margin="31,131,0,0" VerticalAlignment="Top" Width="272" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="lbxTeams_SelectionChanged"/>
         <TextBlock HorizontalAlignment="Left" Height="18" Margin="40,108,0,0" TextWrapping="Wrap" Text="Teams" VerticalAlignment="Top" Width="75"/>
         <TextBlock HorizontalAlignment="Left" Height="18" Margin="386,108,0,0" TextWrapping="Wrap" Text="Players" VerticalAlignment="Top" Width="62"/>
-        <ListBox x:Name="lbxPlayers" HorizontalAlignment="Left" Height="180" Margin="386,131,0,0" VerticalAlignment="Top" Width="269" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <ListBox x:Name="lbxPlayers" HorizontalAlignment="Left" Height="180" Margin="386,131,0,0" VerticalAlignment="Top" Width="269" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="lbxPlayers_SelectionChanged"/>
         <Image x:Name="imgOneStar" HorizontalAlignment="Left" Height="32" Margin="671,138,0,0" VerticalAlignment="Top" Width="33"/>
         <Image x:Name="imgTwoStar" HorizontalAlignment="Left" Height="32" Margin="710,138,0,0" VerticalAlignment="Top" Width="33"/>
         <Image x:Name="imgThreeStar" HorizontalAlignment="Left" Height="32" Margin="752,138,0,0" VerticalAlignment="Top" Width="33"/>

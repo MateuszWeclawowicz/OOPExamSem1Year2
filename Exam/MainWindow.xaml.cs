@@ -88,7 +88,8 @@ namespace Exam
             teams.Add(t3);
 
             //sort teams
-            //teams.Sort();
+            teams.Sort();
+            teams.Reverse();
             //display teams in listbox
             lbxTeams.ItemsSource = teams;
         }
@@ -142,8 +143,24 @@ namespace Exam
 
             //get teams
             List<Team> teams = lbxTeams.ItemsSource as List<Team>;
-            //teams.Sort();
+            teams.Sort();
+            teams.Reverse();
             lbxTeams.Items.Refresh();
+        }
+
+        private void lbxPlayers_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //get selected player
+            Player selectedPlayer = lbxPlayers.SelectedItem as Player;
+            string starSolid = "images/starsolid.png";
+            int points = selectedPlayer.Points;
+
+            if(points <= 15 && points > 10)
+            {
+                imgOneStar.Source = new BitmapImage(new Uri(starSolid, UriKind.Relative));
+                imgTwoStar.Source = new BitmapImage(new Uri(starSolid, UriKind.Relative));
+                imgThreeStar.Source = new BitmapImage(new Uri(starSolid, UriKind.Relative));
+            }
         }
     }
 }
