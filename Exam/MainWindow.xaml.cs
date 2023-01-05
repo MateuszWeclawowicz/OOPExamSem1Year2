@@ -143,8 +143,12 @@ namespace Exam
 
             //get teams
             List<Team> teams = lbxTeams.ItemsSource as List<Team>;
+
+            //sort team by points
             teams.Sort();
             teams.Reverse();
+
+            //refresh teams
             lbxTeams.Items.Refresh();
         }
 
@@ -157,13 +161,12 @@ namespace Exam
             string starSolid = "images/starsolid.png";
             string starBlank = "images/staroutline.png";
 
-            
-
             //if selected player is not null
             if(selectedPlayer != null)
             {
                 //get selected player points
                 int points = selectedPlayer.Points;
+
                 //determine star rating and update images
                 if (points <= 15 && points > 10)
                 {
@@ -177,7 +180,7 @@ namespace Exam
                     imgTwoStar.Source = new BitmapImage(new Uri(starSolid, UriKind.Relative));
                     imgThreeStar.Source = new BitmapImage(new Uri(starBlank, UriKind.Relative));
                 }
-                else if(points <=5 && points > 1)
+                else if(points <= 5 && points > 1)
                 {
                     imgOneStar.Source = new BitmapImage(new Uri(starSolid, UriKind.Relative));
                     imgTwoStar.Source = new BitmapImage(new Uri(starBlank, UriKind.Relative));
