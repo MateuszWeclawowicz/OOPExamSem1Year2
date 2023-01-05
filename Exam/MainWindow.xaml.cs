@@ -39,22 +39,6 @@ namespace Exam
         }
         private void GetData()
         {
-            //create team list
-            List<Team> teams = new List<Team>();
-
-            //create teams
-            Team t1 = new Team() { Name = "France" };
-            Team t2 = new Team() { Name = "Italy" };
-            Team t3 = new Team() { Name = "Spain" };
-
-            //add teams to list
-            teams.Add(t1);
-            teams.Add(t2);
-            teams.Add(t3);
-
-            //display teams in listbox
-            lbxTeams.ItemsSource = teams;
-
             //create players
             //French players
             Player p1 = new Player() { Name = "Marie", ResultRecord = "WWDDL" };
@@ -71,22 +55,47 @@ namespace Exam
             Player p8 = new Player() { Name = "Jose", ResultRecord = "LLLLL" };
             Player p9 = new Player() { Name = "Pablo", ResultRecord = "DDDDD" };
 
-            //add players to respective teams
+            //add players to respective player list
             //France
-            t1.Players.Add(p1);
-            t1.Players.Add(p2);
-            t1.Players.Add(p3);
+            List<Player> france = new List<Player>();
+            france.Add(p1);
+            france.Add(p2);
+            france.Add(p3);
 
             //Italy
-            t2.Players.Add(p4);
-            t2.Players.Add(p5);
-            t2.Players.Add(p6);
+            List<Player> italy = new List<Player>();
+            italy.Add(p4);
+            italy.Add(p5);
+            italy.Add(p6);
 
-            //Spanish
-            t3.Players.Add(p7);
-            t3.Players.Add(p8);
-            t3.Players.Add(p9);
-                
+            //Spain
+            List<Player> spain = new List<Player>();
+            spain.Add(p7);
+            spain.Add(p8);
+            spain.Add(p9);
+
+            //create team list
+            List<Team> teams = new List<Team>();
+
+            //create teams
+            Team t1 = new Team() { Name = "France", Players = france};
+            Team t2 = new Team() { Name = "Italy", Players = italy };
+            Team t3 = new Team() { Name = "Spain", Players = spain };
+
+            //add teams to list
+            teams.Add(t1);
+            teams.Add(t2);
+            teams.Add(t3);
+
+            //display teams in listbox
+            lbxTeams.ItemsSource = teams;
+        }
+
+        private void lbxTeams_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Team selected = lbxTeams.SelectedItem as Team;
+
+            lbxPlayers.ItemsSource = selected.Players;
         }
     }
 }

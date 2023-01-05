@@ -9,7 +9,7 @@
         Loaded="Window_Loaded">
     <Grid>
         <TextBlock HorizontalAlignment="Center" Height="53" Margin="0,27,0,0" TextWrapping="Wrap" Text="Tiddlywinks World Cup" VerticalAlignment="Top" Width="425" FontSize="36" TextAlignment="Center"/>
-        <ListBox x:Name="lbxTeams" HorizontalAlignment="Left" Height="180" Margin="31,131,0,0" VerticalAlignment="Top" Width="272" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <ListBox x:Name="lbxTeams" HorizontalAlignment="Left" Height="180" Margin="31,131,0,0" VerticalAlignment="Top" Width="272" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="lbxTeams_SelectionChanged"/>
         <TextBlock HorizontalAlignment="Left" Height="18" Margin="40,108,0,0" TextWrapping="Wrap" Text="Teams" VerticalAlignment="Top" Width="75"/>
         <TextBlock HorizontalAlignment="Left" Height="18" Margin="386,108,0,0" TextWrapping="Wrap" Text="Players" VerticalAlignment="Top" Width="62"/>
         <ListBox x:Name="lbxPlayers" HorizontalAlignment="Left" Height="180" Margin="386,131,0,0" VerticalAlignment="Top" Width="269" d:ItemsSource="{d:SampleData ItemCount=5}"/>

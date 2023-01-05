@@ -16,7 +16,7 @@ namespace Exam
         #endregion Properties
         public override string ToString()
         {
-            return base.ToString();
+            return String.Format($"{Name} - {ResultRecord}");
         }
     }
 }
