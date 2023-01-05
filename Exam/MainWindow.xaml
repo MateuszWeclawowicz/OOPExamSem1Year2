@@ -18,9 +18,9 @@
         <Image x:Name="imgThreeStar" HorizontalAlignment="Left" Height="32" Margin="752,138,0,0" VerticalAlignment="Top" Width="33"/>
         <TextBlock HorizontalAlignment="Left" Height="18" Margin="672,108,0,0" TextWrapping="Wrap" Text="Player Rating" VerticalAlignment="Top" Width="80"/>
         <TextBlock HorizontalAlignment="Left" Height="18" Margin="672,217,0,0" TextWrapping="Wrap" Text="Record Result" VerticalAlignment="Top" Width="80"/>
-        <Button x:Name="btnWin" Content="Win" HorizontalAlignment="Left" Height="19" Margin="689,249,0,0" VerticalAlignment="Top" Width="63"/>
-        <Button x:Name="btnLoss" Content="Loss" HorizontalAlignment="Left" Height="19" Margin="689,284,0,0" VerticalAlignment="Top" Width="63"/>
-        <Button x:Name="btnDraw" Content="Draw" HorizontalAlignment="Left" Height="19" Margin="689,321,0,0" VerticalAlignment="Top" Width="63"/>
+        <Button x:Name="btnWin" Content="Win" HorizontalAlignment="Left" Height="19" Margin="689,249,0,0" VerticalAlignment="Top" Width="63" Click="btnWin_Click"/>
+        <Button x:Name="btnLoss" Content="Loss" HorizontalAlignment="Left" Height="19" Margin="689,284,0,0" VerticalAlignment="Top" Width="63" Click="btnLoss_Click"/>
+        <Button x:Name="btnDraw" Content="Draw" HorizontalAlignment="Left" Height="19" Margin="689,321,0,0" VerticalAlignment="Top" Width="63" Click="btnDraw_Click"/>
 
     </Grid>
 </Window>

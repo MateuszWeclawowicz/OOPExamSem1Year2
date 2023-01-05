@@ -99,5 +99,44 @@ namespace Exam
             //show players of that team
             lbxPlayers.ItemsSource = selected.Players;
         }
+
+        private void btnWin_Click(object sender, RoutedEventArgs e)
+        {
+            UpdateRecord("W");
+        }
+
+        private void btnLoss_Click(object sender, RoutedEventArgs e)
+        {
+            UpdateRecord("L");
+        }
+
+        private void btnDraw_Click(object sender, RoutedEventArgs e)
+        {
+            UpdateRecord("D");
+        }
+
+        private void UpdateRecord(string result)
+        {
+            //get selected player
+            Player selectedPlayer = lbxPlayers.SelectedItem as Player;
+
+            //if selected player isn't null run code
+            if (selectedPlayer != null)
+            {
+                //create a temporary string to manipulate
+                string record;
+
+                //remove first character from string and assign value to temp string
+                record = selectedPlayer.ResultRecord.Remove(0, 1);
+
+                //insert new result into temp string
+                record = record.Insert(record.Length, result);
+
+                //give new value to player object property
+                selectedPlayer.ResultRecord = record;
+            }
+            //refresh listbox
+            lbxPlayers.Items.Refresh();
+        }
     }
 }
