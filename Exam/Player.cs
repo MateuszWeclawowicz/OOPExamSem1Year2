@@ -8,8 +8,12 @@ namespace Exam
 {
     internal class Player
     {
+        #region Properties
+
         public string Name { get; set; }
         public string ResultRecord { get; set; }
+
+        #endregion Properties
         public override string ToString()
         {
             return base.ToString();

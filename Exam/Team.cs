@@ -8,11 +8,15 @@ namespace Exam
 {
     internal class Team
     {
+        #region Properties
+
         public string Name { get; set; }
         public List<Player> Players { get; set; }
+
+        #endregion Properties
         public override string ToString()
         {
-            return base.ToString();
+            return String.Format($"{Name}");
         }
     }
 }
