@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * Mateusz Weclawowicz
+ * 5/1/2023
+ * Github: https://github.com/MateuszWeclawowicz/OOPExamSem1Year2
+ * Winter Exam Sem 1 Year 2
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
