@@ -93,8 +93,10 @@ namespace Exam
 
         private void lbxTeams_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            //get selected team
             Team selected = lbxTeams.SelectedItem as Team;
 
+            //show players of that team
             lbxPlayers.ItemsSource = selected.Players;
         }
     }
