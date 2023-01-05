@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exam
 {
-    internal class Team
+    internal class Team : IComparable<Team>
     {
         private int _teamPoints;
         #region Properties
@@ -17,6 +17,7 @@ namespace Exam
         { 
             get 
             {
+                _teamPoints = 0;
                 foreach (Player player in Players)
                 {
                     _teamPoints += player.Points;
@@ -32,5 +33,12 @@ namespace Exam
         {
             return String.Format($"{Name} - {TeamPoints}");
         }
+
+        public int CompareTo(Team other)
+        {
+            return this.TeamPoints.CompareTo(other.TeamPoints);
+        }
+
+
     }
 }

@@ -87,6 +87,8 @@ namespace Exam
             teams.Add(t2);
             teams.Add(t3);
 
+            //sort teams
+            //teams.Sort();
             //display teams in listbox
             lbxTeams.ItemsSource = teams;
         }
@@ -137,6 +139,11 @@ namespace Exam
             }
             //refresh listbox
             lbxPlayers.Items.Refresh();
+
+            //get teams
+            List<Team> teams = lbxTeams.ItemsSource as List<Team>;
+            //teams.Sort();
+            lbxTeams.Items.Refresh();
         }
     }
 }
