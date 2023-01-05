@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Exam"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        Loaded="Window_Loaded">
     <Grid>
         <TextBlock HorizontalAlignment="Center" Height="53" Margin="0,27,0,0" TextWrapping="Wrap" Text="Tiddlywinks World Cup" VerticalAlignment="Top" Width="425" FontSize="36" TextAlignment="Center"/>
         <ListBox x:Name="lbxTeams" HorizontalAlignment="Left" Height="180" Margin="31,131,0,0" VerticalAlignment="Top" Width="272" d:ItemsSource="{d:SampleData ItemCount=5}"/>
@@ -17,9 +18,9 @@
         <Image x:Name="imgThreeStar" HorizontalAlignment="Left" Height="32" Margin="752,138,0,0" VerticalAlignment="Top" Width="33"/>
         <TextBlock HorizontalAlignment="Left" Height="18" Margin="672,108,0,0" TextWrapping="Wrap" Text="Player Rating" VerticalAlignment="Top" Width="80"/>
         <TextBlock HorizontalAlignment="Left" Height="18" Margin="672,217,0,0" TextWrapping="Wrap" Text="Record Result" VerticalAlignment="Top" Width="80"/>
-        <Button x:Name="btnWin" Content="Button" HorizontalAlignment="Left" Height="19" Margin="689,249,0,0" VerticalAlignment="Top" Width="63"/>
-        <Button x:Name="btnLoss" Content="Button" HorizontalAlignment="Left" Height="19" Margin="689,284,0,0" VerticalAlignment="Top" Width="63"/>
-        <Button x:Name="btnDraw" Content="Button" HorizontalAlignment="Left" Height="19" Margin="689,321,0,0" VerticalAlignment="Top" Width="63"/>
+        <Button x:Name="btnWin" Content="Win" HorizontalAlignment="Left" Height="19" Margin="689,249,0,0" VerticalAlignment="Top" Width="63"/>
+        <Button x:Name="btnLoss" Content="Loss" HorizontalAlignment="Left" Height="19" Margin="689,284,0,0" VerticalAlignment="Top" Width="63"/>
+        <Button x:Name="btnDraw" Content="Draw" HorizontalAlignment="Left" Height="19" Margin="689,321,0,0" VerticalAlignment="Top" Width="63"/>
 
     </Grid>
 </Window>
