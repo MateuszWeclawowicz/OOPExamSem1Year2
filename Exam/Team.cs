@@ -8,15 +8,29 @@ namespace Exam
 {
     internal class Team
     {
+        private int _teamPoints;
         #region Properties
 
         public string Name { get; set; }
         public List<Player> Players { get; set; }
+        public int TeamPoints 
+        { 
+            get 
+            {
+                foreach (Player player in Players)
+                {
+                    _teamPoints += player.Points;
+                }
+                return _teamPoints;
+            } 
+            
+        }
 
+        
         #endregion Properties
         public override string ToString()
         {
-            return String.Format($"{Name}");
+            return String.Format($"{Name} - {TeamPoints}");
         }
     }
 }
