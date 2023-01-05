@@ -18,9 +18,12 @@ namespace Exam
         { 
             get
             {
+                //reset points atrribute 
                 _points = 0;
+                //for loop for the length of the string
                 for (int i = 0; i < ResultRecord.Length; i++)
                 {
+                    //check individual characters for win, draw or loss and add the respective points
                     if (ResultRecord[i] == 'W')
                     {
                         _points += WIN;
