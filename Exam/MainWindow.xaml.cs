@@ -152,15 +152,45 @@ namespace Exam
         {
             //get selected player
             Player selectedPlayer = lbxPlayers.SelectedItem as Player;
-            string starSolid = "images/starsolid.png";
-            int points = selectedPlayer.Points;
 
-            if(points <= 15 && points > 10)
+            //get image paths
+            string starSolid = "images/starsolid.png";
+            string starBlank = "images/staroutline.png";
+
+            
+
+            //if selected player is not null
+            if(selectedPlayer != null)
             {
-                imgOneStar.Source = new BitmapImage(new Uri(starSolid, UriKind.Relative));
-                imgTwoStar.Source = new BitmapImage(new Uri(starSolid, UriKind.Relative));
-                imgThreeStar.Source = new BitmapImage(new Uri(starSolid, UriKind.Relative));
+                //get selected player points
+                int points = selectedPlayer.Points;
+                //determine star rating and update images
+                if (points <= 15 && points > 10)
+                {
+                    imgOneStar.Source = new BitmapImage(new Uri(starSolid, UriKind.Relative));
+                    imgTwoStar.Source = new BitmapImage(new Uri(starSolid, UriKind.Relative));
+                    imgThreeStar.Source = new BitmapImage(new Uri(starSolid, UriKind.Relative));
+                }
+                else if(points <= 10 && points > 5)
+                {
+                    imgOneStar.Source = new BitmapImage(new Uri(starSolid, UriKind.Relative));
+                    imgTwoStar.Source = new BitmapImage(new Uri(starSolid, UriKind.Relative));
+                    imgThreeStar.Source = new BitmapImage(new Uri(starBlank, UriKind.Relative));
+                }
+                else if(points <=5 && points > 1)
+                {
+                    imgOneStar.Source = new BitmapImage(new Uri(starSolid, UriKind.Relative));
+                    imgTwoStar.Source = new BitmapImage(new Uri(starBlank, UriKind.Relative));
+                    imgThreeStar.Source = new BitmapImage(new Uri(starBlank, UriKind.Relative));
+                }
+                else
+                {
+                    imgOneStar.Source = new BitmapImage(new Uri(starBlank, UriKind.Relative));
+                    imgTwoStar.Source = new BitmapImage(new Uri(starBlank, UriKind.Relative));
+                    imgThreeStar.Source = new BitmapImage(new Uri(starBlank, UriKind.Relative));
+                }
             }
+            
         }
     }
 }
